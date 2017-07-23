@@ -9,6 +9,7 @@ class PostsTable extends Table
     public function initialize(array $config)
     {
         $this -> addBehavior('Timestamp');
+        $this -> hasMany('Comments');
     }
     public function validationDefault(Validator $validator)
     {
